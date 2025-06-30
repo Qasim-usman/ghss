@@ -7,7 +7,15 @@
     "start": "node app.js",
     "dev": "nodemon app.js"
   },
-  "keywords": ["school", "students", "nodejs", "express", "mysql", "admin", "authentication"],
+  "keywords": [
+    "school",
+    "students",
+    "nodejs",
+    "express",
+    "mysql",
+    "admin",
+    "authentication"
+  ],
   "author": "Qasim Usman",
   "license": "ISC",
   "dependencies": {

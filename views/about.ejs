@@ -1,0 +1,308 @@
+<%- include('partials/header') %>
+
+<!-- Hero Section -->
+<section class="about-hero">
+  <div class="overlay">
+    <h1>About <span>GHSS No. 3</span></h1>
+    <p>Empowering students through discipline, values, and knowledge.</p>
+  </div>
+</section>
+<div class="section-divider"></div>
+
+<!-- Mission & Vision -->
+<section class="info-section">
+  <div class="card">
+    <i class="fas fa-bullseye"></i>
+    <h2>Our Mission</h2>
+    <p>To nurture disciplined, responsible, and visionary students shaping Pakistan's future.</p>
+  </div>
+  <div class="card">
+    <i class="fas fa-eye"></i>
+    <h2>Our Vision</h2>
+    <p>To be Abbottabad’s beacon of excellence in academics, values, and leadership.</p>
+  </div>
+</section>
+<div class="section-divider"></div>
+
+<!-- Principal's Message -->
+<section class="principal">
+  <div class="card wide">
+    <i class="fas fa-user-tie"></i>
+    <h2>Principal’s Message</h2>
+    <p>“Education at GHSS No. 3 goes beyond classrooms. Our aim is to build character and inspire excellence.”</p>
+    <h4>- Mr. Qasim Usman, Principal</h4>
+  </div>
+</section>
+<div class="section-divider"></div>
+
+<!-- Facilities -->
+<section class="facilities">
+  <h2>Our Facilities</h2>
+  <div class="facility-grid">
+    <div class="facility-card">
+      <i class="fas fa-chalkboard-teacher"></i>
+      <h3>Smart Classrooms</h3>
+      <p>Digital learning spaces equipped for modern education.</p>
+    </div>
+    <div class="facility-card">
+      <i class="fas fa-flask"></i>
+      <h3>Science & IT Labs</h3>
+      <p>Practical-based labs for science and technology exploration.</p>
+    </div>
+    <div class="facility-card">
+      <i class="fas fa-user-shield"></i>
+      <h3>Focus on Discipline</h3>
+      <p>We groom students with respect, discipline, and moral values.</p>
+    </div>
+  </div>
+</section>
+<div class="section-divider"></div>
+
+<!-- Timeline -->
+<section class="timeline-section">
+  <h2>📖 Our Journey</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="content">
+        <h3>2008</h3>
+        <p>Founded with the mission to serve students of Abbottabad.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="content">
+        <h3>2015</h3>
+        <p>Library, science, and IT labs introduced to enhance learning.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="content">
+        <h3>2020</h3>
+        <p>Achieved 100% board result and transitioned to digital classrooms.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="section-divider"></div>
+
+
+<!-- Faculty -->
+<section class="faculty">
+  <h2>👨‍🏫 Meet Our Faculty</h2>
+  <br>
+  <div class="faculty-grid">
+    <div class="teacher-card"><i class="fas fa-user"></i><h4>Mr. Adeel Sultan</h4><p>Mathematics</p></div>
+    <div class="teacher-card"><i class="fas fa-user"></i><h4>Mr. Sajid</h4><p>Biology</p></div>
+    <div class="teacher-card"><i class="fas fa-user"></i><h4>Mr. Tanveer</h4><p>English</p></div>
+    <div class="teacher-card"><i class="fas fa-user"></i><h4>Mr. Anwar-Ul-Haq</h4><p>M.Q</p></div>
+    <div class="teacher-card"><i class="fas fa-user"></i><h4>Mr. Aness</h4><p>Computer Science</p></div>
+  </div>
+</section>
+
+<!-- Developer -->
+<section class="developer">
+  <div class="dev-card">
+    <img src="/images/qasim.jpg" alt="Developer">
+    <h2>👨‍💻 Developer</h2>
+    <h3>Qasim Usman</h3>
+    <p>Class 9th | GHSS No. 3, Abbottabad</p>
+    <p>rqcoder412@gmail.com</p>
+    <p>Passionate full stack web developer learning real-world backend projects.</p>
+  </div>
+</section>
+<div class="section-divider"></div>
+
+<!-- Call to Action -->
+<section class="cta">
+  <h2>Want to Join GHSS No. 3?</h2>
+  <p>Be a part of our legacy. Enroll today.</p>
+  <br>
+  <a href="/contact" class="btn">Contact Us</a>
+</section>
+
+<a href="#" class="back-to-top">↑</a>
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<!-- CSS Embedded -->
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #0e1116;
+    color: #fff;
+  }
+  .about-hero {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 10px;
+  }
+  .overlay h1 {
+    font-size: 3rem;
+    color: #00bfff;
+  }
+  .overlay span {
+    color: #ffd700;
+  }
+  .info-section, .principal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 60px 20px;
+  }
+  .card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid #00bfff22;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 0 15px #00bfff33;
+  }
+  .card i {
+    font-size: 2.5rem;
+    color: #00bfff;
+    margin-bottom: 15px;
+  }
+  .card.wide {
+    max-width: 900px;
+  }
+  .facilities {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  .facility-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+  }
+  .facility-card {
+    background: #1a1f27;
+    padding: 25px;
+    border-radius: 10px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,191,255,0.2);
+  }
+  .facility-card i {
+    font-size: 2rem;
+    color: #00bfff;
+  }
+    .section-divider {
+    height: 2px;
+    background: linear-gradient(to right, #00bfff, #ffffff11, #00bfff);
+    margin: 60px auto;
+    width: 80%;
+    border-radius: 2px;
+  }
+  .timeline-section {
+    background: #10131a;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  .timeline-item {
+    background: #181d27;
+    margin: 20px auto;
+    padding: 20px;
+    border-left: 5px solid #00bfff;
+    border-radius: 8px;
+    max-width: 600px;
+    text-align: left;
+  }
+  .faculty {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  .faculty-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .teacher-card {
+    background: #1a1f27;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+  }
+  .teacher-card i {
+    font-size: 2rem;
+    color: #00bfff;
+    margin-bottom: 10px;
+  }
+  .developer {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  .dev-card {
+    background: rgba(255, 255, 255, 0.04);
+    padding: 40px;
+    max-width: 500px;
+    margin: auto;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    border: 1px solid #00bfff44;
+  }
+  .dev-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #00bfff;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  .cta {
+    background: linear-gradient(to right, #00bfff55, #1e2a38);
+    padding: 60px 20px;
+    text-align: center;
+  }
+  .cta .btn {
+    background: #00bfff;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    box-shadow: 0 0 10px #00bfff;
+    margin-bottom: 10px;
+  }
+  .back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #00bfff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  @media (max-width: 768px) {
+    .overlay h1 {
+      font-size: 2rem;
+    }
+    .info-section, .principal, .facility-grid, .faculty-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+    .card, .card.wide, .facility-card, .teacher-card {
+      width: 100%;
+      max-width: 90%;
+    }
+    .dev-card {
+      padding: 20px;
+    }
+  }
+</style>
+
+<%- include('partials/footer') %>

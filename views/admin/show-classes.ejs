@@ -1,0 +1,91 @@
+<%- include('../partials/header') %>
+
+<section class="classes-section">
+  <h2>📚 All Classes</h2>
+
+  <% if (result.length === 0) { %>
+    <p class="no-class-msg">❌ No classes found.</p>
+  <% } else { %>
+    <div class="class-grid">
+      <% result.forEach(cls => { %>
+        <a href="/admin/<%= cls.class %>" class="class-card">
+          <h3>Class <%= cls.class %></h3>
+          <p>Click to view sections</p>
+        </a>
+      <% }) %>
+    </div>
+  <% } %>
+</section>
+
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+    color: white;
+  }
+
+  .classes-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 100px 20px;
+    text-align: center;
+  }
+
+  .classes-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #00bfff;
+  }
+
+  .no-class-msg {
+    font-size: 1.2rem;
+    color: #ccc;
+  }
+
+  .class-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    padding: 0 10px;
+  }
+
+  .class-card {
+    background: #1a1f2b;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,191,255,0.3);
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    border: 1px solid transparent;
+  }
+
+  .class-card:hover {
+    transform: translateY(-5px);
+    border: 1px solid #00bfff;
+    box-shadow: 0 0 20px rgba(0,191,255,0.5);
+  }
+
+  .class-card h3 {
+    margin: 0 0 10px;
+    color: #ffd700;
+    font-size: 1.5rem;
+  }
+
+  .class-card p {
+    color: #ccc;
+  }
+
+  @media (max-width: 768px) {
+    .classes-section h2 {
+      font-size: 2rem;
+    }
+
+    .class-card {
+      padding: 20px;
+    }
+  }
+</style>
+
+<%- include('../partials/footer') %>

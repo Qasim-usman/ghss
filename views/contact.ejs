@@ -1,0 +1,123 @@
+<%- include('partials/header') %>
+
+<section class="contact-premium">
+  <div class="contact-box">
+    <h1>📬 Contact GHSS No. 3</h1>
+    <p>Let us know your questions, feedback or admission inquiries.</p>
+
+    <form id="contactForm" action="https://formspree.io/f/manjagpe" method="POST">
+      <input type="text" name="name" placeholder="👤 Full Name" required autocomplete="off">
+      <input type="email" name="email" placeholder="📧 Your Email" required  autocomplete="off">
+      <textarea name="message" rows="6" placeholder="📝 Your Message" required  autocomplete="off"></textarea>
+      <button type="submit">📨 Send Message</button>
+    </form>
+  </div>
+</section>
+
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+    const name = document.querySelector("input[name='name']").value.trim();
+    const email = document.querySelector("input[name='email']").value.trim();
+    const message = document.querySelector("textarea[name='message']").value.trim();
+
+    if (!name || !email || !message) {
+      e.preventDefault();
+      alert("❌ Please fill in all fields.");
+    } else if (!email.includes("@")) {
+      e.preventDefault();
+      alert("❌ Invalid email address.");
+    }
+  });
+</script>
+
+<style>
+  .contact-premium {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 97px 20px;
+  }
+
+  .contact-box {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(14px);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 191, 255, 0.3), 0 0 30px rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: floatIn 0.6s ease;
+  }
+
+  @keyframes floatIn {
+    0% { transform: translateY(30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+
+  .contact-box h1 {
+    font-size: 2.5rem;
+    color: #00bfff;
+    margin-bottom: 10px;
+  }
+
+  .contact-box p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 30px;
+  }
+
+  .contact-box input,
+  .contact-box textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: background 0.3s;
+  }
+
+  .contact-box input:focus,
+  .contact-box textarea:focus {
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  .contact-box button {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    background: #00bfff;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 12px #00bfff;
+  }
+
+  .contact-box button:hover {
+    background: #019ad4;
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px #00bfff;
+  }
+
+  @media (max-width: 768px) {
+    .contact-box {
+      padding: 30px 20px;
+    }
+
+    .contact-box h1 {
+      font-size: 2rem;
+    }
+  }
+</style>
+
+<%- include('partials/footer') %>

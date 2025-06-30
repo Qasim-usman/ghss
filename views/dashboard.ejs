@@ -1,0 +1,134 @@
+<%- include('partials/header') %>
+
+<section class="admin-dashboard">
+  <div class="dashboard-container">
+    <h1 class="glow-title">🚀 Admin Dashboard</h1>
+
+    <div class="dashboard-grid">
+      <!-- All Classes -->
+      <a href="/admin/classes" class="dashboard-card">
+        <div class="icon-wrapper">
+          <i class="fas fa-layer-group"></i>
+        </div>
+        <h2>All Classes</h2>
+        <p>View all classes and their sections</p>
+      </a>
+
+      <!-- All Students -->
+      <!-- Add New Student -->
+     
+
+      <!-- Analytics -->
+      <div class="dashboard-card disabled">
+        <div class="icon-wrapper">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <h2>Analytics</h2>
+        <p>Coming Soon...</p>
+      </div>
+
+      <!-- Logout -->
+     
+    </div>
+  </div>
+</section>
+
+<style>
+  body {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+
+  .admin-dashboard {
+    padding: 96px 20px;
+    min-height: 100vh;
+  }
+
+  .dashboard-container {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+  }
+
+  .glow-title {
+    font-size: 3rem;
+    margin-bottom: 123px;
+    color: #00e0ff;
+    text-shadow: 0 0 15px #00e0ff99;
+  }
+
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+  }
+
+  .dashboard-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 30px 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.08);
+    transition: 0.3s ease;
+    text-decoration: none;
+    color: white;
+    position: relative;
+  }
+
+  .dashboard-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.2);
+  }
+
+  .dashboard-card.disabled {
+    pointer-events: none;
+    opacity: 0.4;
+  }
+
+  .logout-card {
+    background: linear-gradient(to right, #ff4d4d, #b30000);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+  }
+
+  .logout-card:hover {
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+  }
+
+  .icon-wrapper {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    color: #00e0ff;
+    animation: pulse 2s infinite;
+  }
+
+  .dashboard-card h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+
+  .dashboard-card p {
+    font-size: 0.95rem;
+    color: #ccc;
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+
+  @media (max-width: 500px) {
+    .glow-title {
+      font-size: 2rem;
+    }
+    .dashboard-card h2 {
+      font-size: 1.2rem;
+    }
+  }
+</style>
+
+<%- include('partials/footer') %>

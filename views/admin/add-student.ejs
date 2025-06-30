@@ -1,0 +1,97 @@
+<%- include('../partials/header') %>
+
+<section class="add-student-section">
+  <div class="form-container">
+    <h2>➕ Add Student</h2>
+    <p>Class <span><%= classid %></span> | Section <span><%= section %></span></p>
+
+    <form action="/admin/<%= classid %>/section/<%= section %>/add" method="POST">
+      <input type="text" name="name" placeholder="👤 Student Name" required  autocomplete="off"/>
+      <input type="text" name="rollNo" placeholder="🎓 Roll Number" required  autocomplete="off"/>
+      <input type="text" name="performance" placeholder="📈 Performance (e.g. Excellent)" required  autocomplete="off"/>
+
+      <button type="submit" class="submit-btn">✅ Add Student</button>
+    </form>
+  </div>
+</section>
+
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #0e1116;
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+
+  .add-student-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 107px 20px;
+  }
+
+  .form-container {
+    background: #1c1f26;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,191,255, 0.2);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .form-container h2 {
+    color: #00bfff;
+    margin-bottom: 10px;
+  }
+
+  .form-container p span {
+    color: gold;
+    font-weight: bold;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  input {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    background: #2a2f3a;
+    color: white;
+    font-size: 1rem;
+  }
+
+  input::placeholder {
+    color: #aaa;
+  }
+
+  .submit-btn {
+    padding: 12px;
+    background: #00bfff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 12px rgba(0,191,255, 0.5);
+  }
+
+  .submit-btn:hover {
+    background: #009fd6;
+  }
+
+  @media (max-width: 600px) {
+    .form-container {
+      padding: 30px 20px;
+    }
+  }
+</style>
+
+<%- include('../partials/footer') %>

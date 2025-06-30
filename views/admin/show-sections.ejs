@@ -1,0 +1,81 @@
+<%- include('../partials/header') %>
+
+<section class="section-container">
+  <h2>📘 Class <%= classId %> - Sections</h2>
+
+  <div class="sections-grid">
+    <% ['A', 'B', 'C', 'D'].forEach(section => { %>
+      <a href="/admin/<%= classId %>/section/<%= section %>" class="section-card">
+        <h3>Section <%= section %></h3>
+        <p>👨‍🎓 View Students</p>
+      </a>
+    <% }) %>
+  </div>
+</section>
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0f1218;
+    color: #fff;
+  }
+
+  .section-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 117px 20px;
+    text-align: center;
+  }
+
+  .section-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #00bfff;
+    text-shadow: 0 0 5px rgba(0,191,255,0.6);
+  }
+
+  .sections-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 20px;
+  }
+
+  .section-card {
+    background: #1a1f27;
+    border-radius: 15px;
+    padding: 30px 20px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 12px rgba(0,191,255,0.2);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .section-card:hover {
+    transform: translateY(-6px);
+    background: #222933;
+    box-shadow: 0 0 15px rgba(0,191,255,0.4);
+  }
+
+  .section-card h3 {
+    font-size: 1.8rem;
+    color: #ffd700;
+    margin-bottom: 10px;
+  }
+
+  .section-card p {
+    font-size: 1rem;
+    color: #ccc;
+  }
+
+  @media (max-width: 768px) {
+    .section-card {
+      padding: 25px 15px;
+    }
+  }
+</style>
+
+<%- include('../partials/footer') %>

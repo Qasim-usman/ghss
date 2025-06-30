@@ -1,0 +1,117 @@
+<%- include('../partials/header') %>
+
+<section class="edit-section">
+  <div class="edit-container">
+    <h2>📝 Edit Student - Class <%= classId %>, Section <%= section %></h2>
+
+    <form action="" method="POST" class="edit-form">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" name="name" id="name" placeholder="Enter full name" required value="<%= student.name%>" autocomplete="off">
+      </div>
+
+      <div class="form-group">
+        <label for="roll_no">Roll Number</label>
+        <input type="text" name="roll_no" id="roll_no" placeholder="Enter roll number" required value="<%= student.roll_no%>" autocomplete="off">
+      </div>
+
+      <div class="form-group">
+        <label for="performance">Performance</label>
+        <select name="performance" id="performance" required>
+          <option value="">Select</option>
+          <option value="Excellent">Excellent</option>
+          <option value="Very Good">Very Good</option>
+          <option value="Good">Good</option>
+          <option value="Average">Average</option>
+          <option value="Poor">Poor</option>
+        </select>
+      </div>
+
+      <button type="submit" class="submit-btn">💾 Save Changes</button>
+    </form>
+  </div>
+</section>
+
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #0e1116;
+    color: white;
+    margin: 0;
+  }
+
+  .edit-section {
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .edit-container {
+    background: #1a1f27;
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0,191,255, 0.2);
+  }
+
+  .edit-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #00bfff;
+  }
+
+  .edit-form .form-group {
+    margin-bottom: 20px;
+  }
+
+  .edit-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  .edit-form input,
+  .edit-form select {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: #2a2f3a;
+    color: #fff;
+  }
+
+  .edit-form input:focus,
+  .edit-form select:focus {
+    box-shadow: 0 0 8px #00bfff;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: #00bfff;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    box-shadow: 0 0 15px rgba(0,191,255, 0.3);
+    cursor: pointer;
+  }
+
+  .submit-btn:hover {
+    background: #009fe3;
+    box-shadow: 0 0 25px rgba(0,191,255, 0.5);
+  }
+
+  @media (max-width: 600px) {
+    .edit-container {
+      padding: 25px;
+    }
+  }
+</style>
+
+<%- include('../partials/footer') %>

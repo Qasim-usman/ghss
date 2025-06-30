@@ -1,0 +1,98 @@
+<%- include('../partials/header') %>
+
+<section class="student-detail-container">
+  <div class="student-card">
+    <h2><%= student.name %></h2>
+    <div class="info-grid">
+      <p><strong>🎓 Roll No:</strong> <%= student.roll_no %></p>
+      <p><strong>🏫 Class:</strong> <%= student.class %></p>
+      <p><strong>📚 Section:</strong> <%= student.section %></p>
+      <p><strong>📈 Performance:</strong> <%= student.performance %></p>
+      <p><strong>🕒 Created At:</strong> <%= student.created_at.toLocaleDateString() %></p>
+    </div>
+    <a href="javascript:history.back()" class="back-btn">⬅️ Back to Section</a>
+  </div>
+</section>
+
+<style>
+  body {
+    background: #0f172a;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+  }
+
+  .student-detail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    min-height: 100vh;
+  }
+
+  .student-card {
+    background: #1e293b;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0, 191, 255, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    border-top: 4px solid #00bfff;
+  }
+
+  .student-card h2 {
+    margin-bottom: 30px;
+    color: #00bfff;
+    font-size: 2rem;
+  }
+
+  .info-grid {
+    display: grid;
+    gap: 15px;
+    font-size: 1.1rem;
+    text-align: left;
+    background: #273549;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: inset 0 0 5px rgba(0, 191, 255, 0.1);
+  }
+
+  .info-grid p {
+    margin: 0;
+    color: #f1f5f9;
+  }
+
+  .info-grid strong {
+    color: #94e2ff;
+  }
+
+  .back-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 25px;
+    background: #00bfff;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+
+  .back-btn:hover {
+    background: #009acd;
+  }
+
+  @media (max-width: 600px) {
+    .student-card {
+      padding: 25px;
+    }
+
+    .info-grid {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<%- include('../partials/footer') %>
